@@ -9,4 +9,9 @@ public class DemoController {
     public String hello() {
         return "Hello from Spring Boot!";
     }
+
+    @GetMapping("/random")
+    public int random() {
+        return (int) (Math.random() * 1000) + 1;
+    }
 }
